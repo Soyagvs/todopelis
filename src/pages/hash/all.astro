@@ -1,0 +1,62 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CardMoviesRecent from "../../components/recent/CardMoviesRecent.astro";
+---
+
+<Layout title="terror">
+  <main class="max-w-[1020px] mx-auto">
+    <a
+      href="/"
+      class="text-lg text-secondary font-semibold -mt-10 absolute flex justify-center items-center gap-3"
+    >
+      <svg
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"></path>
+      </svg>
+
+      Volver atras
+    </a>
+    <div class="mt-24 flex flex-col justify-center items-center">
+      <search>
+        <form action="">
+          <div class="flex justify-center items-center gap-2">
+            <svg
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              ></path>
+            </svg>
+
+            <input type="text" name="" id="" class="w-96 h-12 rounded-md max-sm:w-72" />
+          </div>
+        </form>
+      </search>
+    </div>
+    
+
+    <section class="max-w-[1020px] mx-auto mt-16">
+      <div class="flex justify-between items-end">
+        <div class="flex justify-start items-end">
+          <div class="border-l-secondary border-l-4 h-14 pl-2"></div>
+          <h2 class="text-2xl text-pretty font-semibold">Todas</h2>
+        </div>
+      </div>
+      <CardMoviesRecent />
+    </section>
+  </main>
+</Layout>

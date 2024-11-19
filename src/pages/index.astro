@@ -1,9 +1,39 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Categories from "../sections/Categories.astro";
+import Recent from "../sections/Recent.astro";
+import MostPopular from "../sections/MostPopular.astro";
+import All from "../sections/All.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		
-	</main>
+  <main class="max-w-[1020px] mx-auto">
+    <div class="mt-24 flex flex-col justify-center items-center">
+      <search>
+        <form action="">
+          <div class="flex justify-center items-center gap-2">
+            <svg
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              ></path>
+            </svg>
+
+            <input type="text" name="" id="" class="w-96 h-12 rounded-md max-sm:w-72"/>
+          </div>
+        </form>
+      </search>
+    </div>
+    <Categories />
+    <Recent />
+    <MostPopular />
+    <All />
+  </main>
 </Layout>
